@@ -1,0 +1,23 @@
+<div id="notified">
+	<nav class="text-center clearfix">
+		<a class="pull-left close" ng-click="goBackToList()"></a>
+	</nav>
+	<section>
+		<div class="container text-center">
+			<div class="hex-unit">
+				<div class="hex">
+					<div class='r-hex'>
+						<div class='r-hex-inner'>
+							<div class='r-hex-inner-2'>
+								<img ng-src="data:image/png;base64,{{employee.Picture}}" err-src="/assets/images/avatar_placeholder.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- /.hex-unit -->
+			<h3>{{employee.FullName}} {{"views.notified.has been notified of your arrival" | translate}}</h3>
+			<h4>{{"views.notified.Please Stand By" | translate}}</h4>
+		</div>
+	</section> <!-- /section -->
+
+</div>

@@ -1,0 +1,40 @@
+<div id="deliveryTarget">
+	<nav class="text-center clearfix">
+		<a class="pull-left back" ui-sref="start"></a>
+	</nav>
+	<div class="container">
+		<div class="content">
+			<h2> {{"views.delivery_target.Please select delivery recipient" | translate}}</h2>
+			<div class="row target-list">
+				<div class="col-md-offset-2 col-md-4 text-center">
+					<div class="hex-unit target-unit">
+						<div class="hex" ng-click="notifyTeam()">
+					        <div class='r-hex'>
+					            <div class='r-hex-inner'>
+					                <div class='r-hex-inner-2'>
+					                    <img src="/assets/images/appointment.png" />
+					                </div>
+					            </div>
+						    </div> <!-- /.hex -->
+						</div>
+						<p ng-click="notifyTeam()">{{ "views.delivery_target.Decos Team" | translate }}</p>
+					</div> <!-- /.reason-unit -->
+				</div>
+				<div class="col-md-4 text-center">
+					<div class="hex-unit target-unit">
+						<div class="hex" ng-click="notifyTeam()">
+							<div class='r-hex'>
+								<div class='r-hex-inner'>
+									<div class='r-hex-inner-2' ng-click="specifictPerson()">
+										<img src="/assets/images/delivery.png" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<p ng-click="specifictPerson()">{{ "views.delivery_target.Specific Person" | translate }}</p>
+					</div> <!-- /.reason-unit -->
+				</div>
+			</div>
+		</div> <!-- /.content -->
+	</div> <!-- /.container -->
+</div>

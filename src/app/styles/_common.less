@@ -1,0 +1,459 @@
+h2 {
+  font-family: 'proxima_nova_light';
+}
+
+.focused .content {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  h2 {
+    padding-top: 0px;
+  }
+}
+
+.hex-unit {
+  p {
+    cursor: pointer;
+    color: @main-black-color;
+    text-align: center;
+    line-height: 1em;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-family: 'proxima_nova_sbold';
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+.hex {
+  cursor: pointer;
+  width: 174px;
+  height: 200px;
+  background-image: url('../assets/images/contact mask_big.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 auto;
+  @media (min-width: 1920px) {
+    width: 265px;
+    height: 302px;
+  }
+}
+
+.r-hex {
+  overflow: hidden;
+  display: inline-block;
+  margin: 1.3em 0;
+  margin-left: -0.52em;
+  width: 13.5em; height: 11.8em;
+  transform: rotate(-30deg) skewX(30deg);
+  position: relative;
+  z-index: 5;
+  @media (min-width: 1920px) {
+    margin: 2em 0;
+    margin-left: -0.7em;
+    height: 17.7em; width: 20.5em;
+  }
+}
+
+.r-hex *, .r-hex *:before {
+  display: block;
+  overflow: hidden;
+  width: inherit; height: inherit;
+  border-radius: inherit;
+}
+.r-hex-inner {
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  opacity: 1;
+  transition: opacity .75s;
+  cursor: pointer;
+}
+
+.r-hex-inner-2 {
+  transform: skewX(-30deg) rotate(60deg) skewX(30deg);
+  background: white;
+  content: '';
+}
+.r-hex-inner-2 img {
+  &:hover {
+    opacity: 0.7;
+  }
+  margin-top: -0.8em;
+  height: 13.5em;
+  transform: skewX(-30deg) rotate(-90deg);
+  background-size: cover;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 2px rgba(150, 150, 150, 1);
+  -webkit-box-shadow: 0px 0px 10px 0px red;
+  -moz-box-shadow:    0px 0px 10px 0px red;
+  box-shadow:         0px 0px 10px 0px red;
+  @media (min-width: 1920px) {
+    height: 20.5em;
+    margin-top: -1.2em;
+  }
+}
+
+@media (min-width: 1920px) {
+  .focused .hex {
+    width: 174px;
+    height: 200px;
+  }
+  .focused .r-hex {
+    margin: 1.3em 0;
+    margin-left: -0.52em;
+    width: 13.5em; height: 11.8em;
+  }
+  .focused .r-hex-inner-2 img {
+    margin-top: -0.8em;
+    height: 13.5em;
+  }
+}
+
+
+/* A bit small hexagon to be displayed on the chat page */
+.hexagon-wrapper {
+  cursor: pointer;
+  width: 107px;
+  height: 122px;
+  background-image: url('../assets/images/contact mask_big.png');
+  padding-left: 3px;
+  padding-top: 3px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  float: left;
+}
+
+.hexagon {
+  position: relative;
+  width: 100px; 
+  height: 57.74px;
+  margin: 28.87px 0;
+  background-image: url(http://csshexagon.com/img/meow.jpg);
+  background-size: auto 115.4701px;
+  background-position: center;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 70.71px;
+  height: 70.71px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 14.64px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 100.0000px;
+  height: 57.73502691896258px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+  left: 0px;
+}
+
+.hexTop {
+  top: -35.3553px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -35.3553px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 100.0000px;
+  height: 57.7350px;
+  z-index: 2;
+  background: inherit;
+}
+
+
+
+@media (min-width: 1920px) {
+  .hexagon-wrapper {
+    width: 76px;
+    height: 87px;
+    padding-left: 3px;
+    padding-top: 3px;
+    .hexagon {
+      width: 70px; 
+      height: 40.41px;
+      margin: 20.21px 0;
+      background-size: auto 80.8290px;
+      &:after {
+        width: 70.0000px;
+        height: 40.414518843273804px;
+      }
+    }
+
+    .hexTop, .hexBottom {
+      width: 49.50px;
+      height: 49.50px;
+      left: 10.25px;
+
+      &:after {
+        width: 70.0000px;
+        height: 40.414518843273804px;
+         -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-20.2073px);
+          -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-20.2073px);
+          transform:          rotate(45deg) scaleY(1.7321) translateY(-20.2073px);      }
+    } /* /.hexTop, /.hexBottom */
+
+    .hexTop {
+      top: -24.7487px;
+    }
+
+    .hexBottom {
+      bottom: -24.7487px;
+    }
+  } /* /.hexagon-wrapper */
+
+
+  .focused {
+    .hexagon-wrapper {
+      width: 46px;
+      height: 53px;
+      padding-left: 3px;
+      padding-top: 3px;
+      .hexagon {
+        width: 40px; 
+        height: 23.09px;
+        margin: 11.55px 0;
+        background-size: auto 41.5692px;
+        &:after {
+          width: 40.0000px;
+          height: 23.0940px;
+        }
+      }
+
+      .hexTop, .hexBottom {
+        width: 28.28px;
+        height: 28.28px;
+        left: 5.86px;
+
+        &:after {
+          width: 40.0000px;
+          height: 23.094010767585033px;
+           -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-11.5470px);
+            -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-11.5470px);
+            transform:          rotate(45deg) scaleY(1.7321) translateY(-11.5470px);      }
+      } /* /.hexTop, /.hexBottom */
+
+      .hexTop {
+        top: -14.1421px;
+      }
+
+      .hexBottom {
+        bottom: -14.1421px;
+      }
+    } /* /.hexagon-wrapper */
+  }
+}
+
+
+
+/* Mini Hexagon used to display availibility status */
+
+.mini-hexagon {
+  position: relative;
+  width: 25px; 
+  height: 14.43px;
+  margin: 7.22px 0;
+  border-left: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+}
+
+.mini-hexagon:before,
+.mini-hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 17.68px;
+  height: 17.68px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 1.6612px;
+}
+
+.mini-hexagon:before {
+  top: -8.8388px;
+  border-top: solid 2.8284px #ffffff;
+  border-right: solid 2.8284px #ffffff;
+}
+
+.mini-hexagon:after {
+  bottom: -8.8388px;
+  border-bottom: solid 2.8284px #ffffff;
+  border-left: solid 2.8284px #ffffff;
+}
+
+
+@media (min-width: 1920px) {
+  .mini-hexagon {
+    width: 40px; 
+    height: 23.09px;
+    margin: 11.55px 0;
+    border-left: solid 3px #ffffff;
+    border-right: solid 3px #ffffff;
+    &:before, &:after {
+      width: 28.28px;
+      height: 28.28px;
+      left: 2.8579px;
+    }
+    &:before {
+      top: -14.1421px;
+      border-top: solid 4.2426px #ffffff;
+      border-right: solid 4.2426px #ffffff;
+    }
+    &:after {
+      bottom: -14.1421px;
+      border-bottom: solid 4.2426px #ffffff;
+      border-left: solid 4.2426px #ffffff;
+    }
+  }
+
+  .focused {
+    .mini-hexagon {
+      width: 30px; 
+      height: 17.32px;
+      margin: 8.66px 0;
+      border-left: solid 2px #ffffff;
+      border-right: solid 2px #ffffff;
+      &:before, &:after {
+        width: 21.21px;
+        height: 21.21px;
+        left: 2.39px;
+      }
+      &:before {
+        top: -10.6066px;
+        border-top: solid 2.8284px #ffffff;
+        border-right: solid 2.8284px #ffffff;
+      }
+      &:after {
+        bottom: -10.6066px;
+        border-bottom: solid 2.8284px #ffffff;
+        border-left: solid 2.8284px #ffffff;
+      }
+    }
+  }
+}
+
+
+.button {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  cursor: pointer;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 2px;
+  font-size: 0.9em;
+  background-color: #fff;
+  color: #646464;
+}
+
+.button.green {
+  background-color: #0f9d58;
+  color: #fff;
+}
+    
+.button.raised {
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.button > paper-ripple {
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.button.button-large {
+  width: 20vw;
+  height: 7vh;
+  line-height: 7vh;
+}
+
+
+/* Keyboard styling Hack */
+table.keyboardInputMaster tbody tr td table.keyboardInputCenter td:first-child {
+  width: 400px;
+}
+
+
+
+
+/* Search Icon */
+@font-face {
+    font-family: 'proxima_nova_light';
+    src: url('../assets/fonts/proxima_nova_light-webfont.eot');
+    src: url('../assets/fonts/proxima_nova_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/proxima_nova_light-webfont.woff2') format('woff2'),
+         url('../assets/fonts/proxima_nova_light-webfont.woff') format('woff'),
+         url('../assets/fonts/proxima_nova_light-webfont.ttf') format('truetype'),
+         url('../assets/fonts/proxima_nova_light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../assets/fonts/icomoon.eot?ipui95');
+    src:    url('../assets/fonts/icomoon.eot?ipui95#iefix') format('embedded-opentype'),
+        url('../assets/fonts/icomoon.ttf?ipui95') format('truetype'),
+        url('../assets/fonts/icomoon.woff?ipui95') format('woff'),
+        url('../assets/fonts/icomoon.svg?ipui95#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: white;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-h:before {
+    content: "\e900";
+}
+

@@ -1,0 +1,55 @@
+<div id="chat" has-keyboard>
+	<nav class="text-center clearfix">
+		<a class="pull-left back" ng-click="backToStart()"></a>
+	</nav>
+
+	<section>
+		<div class="container">
+			<div class="content">
+				<div class="messages" vertical-slide ng-swipe-up="swipeUp($event)" ng-swipe-down="swipeDown($event)">
+					<ul>
+						<li class="chat-message clearfix" ng-repeat="message in messages">
+							<div class="hexagon-wrapper">
+								<div class="hexagon" ng-style="{'background-image': 'url(data:image/png;base64,{{ (message.status == 0) ? guest.image : employeeData.Picture }})'}">
+								  <div class="hexTop"></div>
+								  <div class="hexBottom"></div>
+								</div>
+							</div>
+							<div class="message-body">
+								<div class="clearfix">
+									<div class="text">{{message.text}}</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="chat-message typing clearfix" ng-show="employeeTyping">
+							<div class="hexagon-wrapper">
+								<div class="hexagon" ng-style="{'background-image': 'url(data:image/png;base64,{{employeeData.Picture}})'}">
+								  <div class="hexTop"></div>
+								  <div class="hexBottom"></div>
+								</div>
+							</div>
+							<div class="message-body">
+								<div class="clearfix">
+									<div class="typing-icon"></div>
+									<div class="typing-status-txt">{{employeeData.FullName}} is typing a message.</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="new-message">
+					<div class="hexagon-wrapper">
+						<div class="hexagon" ng-style="{'background-image': 'url(data:image/png;base64,{{guest.image}})'}">
+						  <div class="hexTop"></div>
+						  <div class="hexBottom"></div>
+						</div>
+					</div>
+					<div class="message-input">
+						<input class="replyChatMessage" id="chatBox" placeholder="Your reply" name="replyText" ng-model="replyText" ng-enter="addMessage(replyText)"  ng-virtual-keyboard="{forcePosition: 'bottom', kt: 'US International', enterSubmit: addMessage, size: 5, openKeyboard: openKeyboard, hideKeyboard: hideKeyboard, sizeAdj: false}" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

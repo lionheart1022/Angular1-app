@@ -1,0 +1,49 @@
+{
+  "name": "digitalreception",
+  "main": [
+    "/dist/digitalreception.min.js",
+    "/dist/digitalreception.min.css"
+  ],
+  "version": "0.1.0",
+  "description": "Digital Reception",
+  "authors": [
+    "Alfred Takala"
+  ],
+  "ignore": [
+    "**/.*",
+    "package.json",
+    "klei.json",
+    "gulpfile.js",
+    "node_modules",
+    "bower_components",
+    "src"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "jquery.kinetic": "~2.1.0",
+    "jquery-mousewheel": "~3.1.13",
+    "angular": "~1.2.14",
+    "angular-cookies": "~1.4.7",
+    "angular-resource": "~1.4.7",
+    "angular-sanitize": "~1.4.7",
+    "angular-touch": "~1.4.7",
+    "angular-translate": "~2.8.1",
+    "angular-i18n": "~1.4.7",
+    "angular-translate-loader-partial": "~2.8.1",
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap-material-design": "~0.3.0",
+    "angular-swipe": "~0.1.0",
+    "signalr": "~2.2.0",
+    "ng-lodash": "~0.3.0",
+    "ng-idle": "~1.1.1",
+    "angular-useragent-parser": "~0.1.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.14"
+  },
+  "resolutions": {
+    "angular": "~1.4.x"
+  }
+}

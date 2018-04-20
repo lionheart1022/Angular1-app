@@ -1,0 +1,126 @@
+<div id="employeeList" class="keyboard-root" has-keyboard>
+	<nav class="text-center clearfix">
+		<a class="pull-left back" ui-sref="start"></a>
+	</nav>
+  <ng-include src="'/default.html'"></ng-include>
+	<!-- The whole employee list -->
+	<section ng-hide="inSearch && (fullList.length != employeeList.length)">
+		<div class="container">
+			<div class="content">
+				<h2 ng-if="reason=='meet' || reason == null"> {{"views.employeelist.Who are you here to meet?" | translate}}</h2>
+				<h2 ng-if="reason=='delivery'"> {{"views.employeelist.For whom you are delivering or picking up a package?" | translate}}</h2>
+				<h2 class="no-top-padding" ng-if="reason=='timeout'"> {{contactee.FullName}} {{"views.employeelist.is not responding, please select someone else or inform the Decos Team" | translate}}</h2>
+			</div> <!-- /.content -->
+		</div> <!-- /.container -->
+
+		<div class="employee-list" ng-class="{'loading': inLoadingMore}">
+			<div class="team" ng-if="reason=='timeout'">
+				<div class="hex-unit">
+					<div class="hex">
+						<div class='r-hex'>
+							<div class='r-hex-inner'>
+								<div class='r-hex-inner-2'>
+									<img ng-click="scheduleAppointment({FullName: 'Decos Team'})" ng-src="/assets/images/training.png" err-src="/assets/images/avatar_placeholder.png" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<p ng-click="scheduleAppointment(employee)">Decos Team</p>
+				</div> <!-- /.hex-unit -->
+
+				<div class="seperator"></div>
+			</div> <!-- team -->
+			<div content-class="my-slidebox-content" slidebox ng-cloak="employeeList" class="employees">
+				<div class="employee" ng-repeat="employee in employeeList track by $index" id="employee{{$index}}" ng-class="{'disabled': employee.status == 2 || employee.status == 3}">
+					<div class="hex-unit">
+						<div class="hex">
+							<div class='r-hex'>
+								<div class='r-hex-inner'>
+									<div class='r-hex-inner-2'>
+										<img ng-click="scheduleAppointment(employee)" ng-src="data:image/png;base64,{{employee.Picture}}" err-src="/assets/images/avatar_placeholder.png" />
+									</div>
+								</div>
+							</div>
+							<div class="availability-icon" ng-show="employee.status != null">
+								<div class="mini-hexagon" ng-class="{'green': (employee.status == 1), 'red': (employee.status == 2 || employee.status == 3) , 'orange': (employee.status == 4) }" ng-style="{'background-color': employee.ColorCode}"></div>
+							</div>
+						</div>
+
+						<p ng-click="scheduleAppointment(employee)">{{ employee.FullName}}</p>
+					</div> <!-- /.hex-unit -->
+				</div>
+			</div>
+
+		</div> <!-- /.employee-list -->
+		<div class="loader" ng-show="inLoadingMore">
+			<span></span>
+		</div>
+	</section>
+
+	<!-- Section shows only the search result is less than 5, We need special operation to center them -->
+	<section ng-show="inSearch && (fullList.length != employeeList.length) && employeeList.length < 5">
+		<div class="container">
+			<div class="content">
+				<h2 ng-if="employeeList.length > 0"> {{"views.employeelist.We found these people for you:" | translate}}</h2>
+				<h2 ng-if="employeeList.length === 0"> {{"views.employeelist.No people found matching" | translate}} {{searchedText}}</h2>
+			</div> <!-- /.content -->
+		</div> <!-- /.container -->
+		<div class="container results-container">
+			<div class="results-wrapper">
+				<div class="inner-wrapper">
+					<div class="search-results clearfix">
+						<div class="employee" ng-repeat="employee in employeeList" ng-class="{'disabled': employee.status == 2 || employee.status == 3}">
+							<div class="hex-unit">
+								<div class="hex">
+									<div class='r-hex'>
+										<div class='r-hex-inner'>
+											<div class='r-hex-inner-2'>
+												<img ng-click="scheduleAppointment(employee)" ng-src="data:image/png;base64,{{employee.Picture}}" err-src="/assets/images/avatar_placeholder.png" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<p ng-click="scheduleAppointment(employee)">{{ employee.FullName}}</p>
+							</div> <!-- /.hex-unit -->
+						</div>
+					</div> <!-- /.search-results -->
+				</div> <!-- /.inner-wrapper -->
+			</div> <!-- /.results-wrapper -->
+		</div> <!-- /.container.results-container -->
+	</section> <!-- /section -->
+
+	<!-- Search results panel with over 5 results -->
+	<section ng-show="inSearch && (fullList.length != employeeList.length) && employeeList.length >= 5">
+		<div class="container">
+			<div class="content">
+				<h2> {{"views.employeelist.We found these people for you:" | translate}}</h2>
+			</div> <!-- /.content -->
+		</div> <!-- /.container -->
+		<div  content-class="my-slidebox-content" slidebox class="search-results many-results">
+			<div class="employee" ng-repeat="employee in employeeList" ng-class="{'disabled': employee.status == 2 || employee.status == 3}">
+				<div class="hex-unit">
+					<div class="hex">
+						<div class='r-hex'>
+							<div class='r-hex-inner'>
+								<div class='r-hex-inner-2'>
+									<img ng-click="scheduleAppointment(employee)" ng-src="data:image/png;base64,{{employee.Picture}}" err-src="/assets/images/avatar_placeholder.png" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<p ng-click="scheduleAppointment(employee)">{{ employee.FullName}}</p>
+				</div> <!-- /.hex-unit -->
+			</div>
+		</div> <!-- /.employee-list -->
+	</section> <!-- /section -->
+
+	<section>
+		<div class="search-container" ng-if="inSearch">
+			<span class="icon-h"></span>
+			<div class="input-field">
+				<input type="search" id="searchText" name="searchText" class="field" maxlength=""  placeholder="{{ 'views.employeelist.Type here to search' | translate}}" id="searchText" ng-model="searchText" ng-change="searchEmployee(searchText)" ng-model-options='{ debounce: 500 }' ng-enter="searchEmployee(searchText)" ng-virtual-keyboard="{forcePosition: 'bottom', kt: 'US International', enterSubmit: vkEnter, sizeAdj: false, size: 5, openKeyboard: openKeyboard, hideKeyboard: hideKeyboard}">
+			</div>
+		</div> <!-- /.search-container -->
+	</section>
+</div>

@@ -1,0 +1,29 @@
+{
+    "views.welcome.Welcome To": "Welkom bij",
+    "views.welcome.Touch screen to begin": "Raak  het scherm aan om te beginnen",
+
+    "views.start.Please select the reason of your visit": "Kies de reden van je bezoek",
+    "views.start.Appointment": "Afspraak",
+    "views.start.Delivery": "Pakketje",
+    "views.start.Training": "Training Bezoek",
+
+    "views.signup.Please enter your name": "Voer je naam in",
+    "views.signup.Your Name": "Jouw naam",
+    "views.signup.Company Optional": "Bedrijf (optioneel)",
+    "views.signup.Sign Up": "Volgende >",
+
+    "views.employeelist.Who are you here to meet?": "Met wie heb je een afspraak?",
+    "views.employeelist.Type here to search": "Typ hier om te zoeken",
+    "views.employeelist.We found these people for you:": "We hebben deze Decossers gevonden:",
+    "views.employeelist.No people found matching": "Geen Decossers gevonden voor",
+    "views.employeelist.For whom you are delivering or picking up a package?": "Voor of van wie is het pakket?",
+    "views.employeelist.is not responding, please select someone else or inform the Decos Team": "reageert niet, selecteer iemand anders of informeer het Decos Team",
+
+    "views.delivery_target.Please select delivery recipient": "Selecteer geadresseerde",
+    "views.delivery_target.Decos Team": "Decos Team",
+    "views.delivery_target.Specific Person": "Specifieke Persoon",
+
+    "views.notifying.Notifying": "{{value}} wordt op de hoogte gebracht van je aanwezigheid",
+    "views.notified.has been notified of your arrival": "Is op de hoogte gesteld van je aanwezigheid",
+    "views.notified.Please Stand By": "Graag even geduld"
+}

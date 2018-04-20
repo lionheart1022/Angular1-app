@@ -1,0 +1,32 @@
+<div id="signUp" has-keyboard>
+	<nav class="text-center clearfix">
+		<a class="pull-left back" ui-sref="start"></a>
+	</nav>
+	<div class="container">
+		<div class="content">
+			<h2> {{"views.signup.Please enter your name" | translate}}</h2>
+			<form class="row">
+				<div class="col-md-offset-3 col-md-6">
+					<div class="form-control-wrapper" ng-class="{'has-error': (!user.name || user.name.length == 0) && usernameRequired}">
+						<input type="text" class="form-control" ng-model="user.name" ng-class="{'empty' : !user.name || user.name.length == 0}" ng-virtual-keyboard="{forcePosition: 'bottom', kt: 'US International', size: 5, enterSubmit: moveFocusToCompany, openKeyboard: openKeyboard, hideKeyboard: hideKeyboard, sizeAdj: false}" ng-enter="moveFocusToCompany()">
+						<div class="floating-label">{{ "views.signup.Your Name" | translate}}</div>
+						<span class="material-input"></span>
+					</div>
+					<div class="form-control-wrapper">
+						<input type="text" id="company" class="form-control" ng-model="user.company" ng-class="{'empty' : !user.company || user.company.length == 0}" ng-virtual-keyboard="{forcePosition: 'bottom', kt: 'US International', size: 5, enterSubmit: signUp, openKeyboard: openKeyboard, hideKeyboard: hideKeyboard, sizeAdj: false}" ng-enter="signUp()">
+						<div class="floating-label">{{ "views.signup.Company Optional" | translate}}</div>
+						<span class="material-input"></span>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="button raised green button-large" id="btnSignup" ng-click="signUp()">
+								<div class="center" fit>{{ "views.signup.Sign Up" | translate }}</div>
+								<paper-ripple fit></paper-ripple>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form> <!-- /form.row -->
+		</div> <!-- /.content -->
+	</div> <!-- /.container -->
+</div>

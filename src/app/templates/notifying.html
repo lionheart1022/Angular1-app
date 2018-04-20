@@ -1,0 +1,25 @@
+<div id="notifying">
+	<nav class="text-center clearfix">
+		<a class="pull-left close" ng-click="goBackToList()"></a>
+	</nav>
+	<section>
+		<div class="container text-center">
+			<div class="hex-unit">
+				<div class="hex">
+					<div class='r-hex'>
+						<div class='r-hex-inner'>
+							<div class='r-hex-inner-2'>
+								<img ng-src="data:image/png;base64,{{employee.Picture}}" err-src="/assets/images/avatar_placeholder.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- /.hex-unit -->
+			<h3>{{"views.notifying.Notifying" | translate :translationData}} </h3>
+			<div class="loader">
+				<span class="loader-icon"></span>
+			</div>
+		</div>
+	</section> <!-- /section -->
+
+</div>

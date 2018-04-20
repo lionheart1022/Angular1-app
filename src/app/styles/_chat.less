@@ -1,0 +1,157 @@
+#chat {
+
+	/* main messages part styling */
+	.messages {
+		margin-top: -5vh;
+		margin-bottom: 5vh;
+		height: 45vh;
+		position: relative;
+		overflow: hidden;
+		cursor: move;
+		&.overflow {
+			ul {
+				top: initial;
+				bottom: 0px;
+				transform: none;
+				padding-left: 0px;
+			}
+		}
+		ul {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			margin-left: 0px;
+			padding-left: 0px;
+			transform: translateY(-50%);
+			color: white;
+			list-style: none;
+		}
+
+		li {
+			width: 100%;
+			margin-bottom: 10px;
+			.hexagon-wrapper {
+				float: left;
+			}
+		}
+
+		li.chat-message.typing .message-body {
+			padding-top: 2.5vh;
+		}
+		.message-body {
+			float: left;
+			width: 75%;
+			margin-left: 3%;
+			padding-top: 3vh;
+			.typing-icon {
+				width: 35px;
+				height: 31px;
+				float: left;
+				background-image: url(../assets/images/typing.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+			} /* /.typing-icon */
+			
+			.typing-status-txt {
+				text-transform: uppercase;
+				line-height: 3vh;
+				float: left;
+				font-size: 1.5rem;
+				text-align: left;
+				margin-left: 3%;
+				width: 78%;
+			}
+
+			.text {
+				line-height: 24px;
+				float: left;
+				font-size: 1.5rem;
+				text-align: left;
+				width: 100%;
+			}
+		} /* /.message-body */
+	}
+
+
+	/* The bottom message input */
+	.message-input {
+		width: 75%;
+		float: left;
+		margin-top: 2vh;
+		margin-left: 3%;
+		span.fake-input {
+			line-height: 4vh;
+			cursor: text;
+			font-size: 1.6rem;
+			color: #888;
+			float: left;
+			padding-right: 3%;
+		}
+		i {
+			width: 47px;
+			height: 32px;
+			background-image: url(../assets/images/keyboard.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			display: inline-block;
+			float: left;
+		}
+		input {
+			text-align: left;
+			width: 100%;
+			border: none;
+			font-size: 1.6rem;
+			line-height: 4vh;
+		}
+	}
+
+
+	@media (min-width: 1920px) {
+		.messages {
+			.message-body {
+				.typing-icon {
+					width: 50px;
+					height: 43px;
+				} /* /.typing-icon */
+			}
+		} /* /.messages */
+
+		.message-input {
+			i {
+				width: 70px;
+				height: 48px;
+			}
+		} /* /.message-input */
+
+		&.focused {
+			.messages {
+				height: 40vh;
+				margin-bottom: 3vh;
+
+				.message-body {
+					padding-top: 1.2vh;
+					.typing-icon {
+						width: 50px;
+						height: 43px;
+					} /* /.typing-icon */
+				}
+			} /* /.messages */
+
+			li.chat-message.typing .message-body {
+				padding-top: 1vh;
+			}
+
+			.message-input {
+				margin-top: 0;
+				i {
+					width: 70px;
+					height: 48px;
+				}
+			} /* /.message-input */
+
+			.typing-status-txt {
+				line-height: 50px;
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+<div id="start">
+	<nav class="text-center">
+		<a class="bell" ng-click="notifyTeam()"></a>
+		<a class="pull-right lang-switch {{currentLanguage}}" ng-click="changeLanguage()"></a>
+	</nav>
+	<div class="container">
+		<div class="content">
+			<h2> {{"views.start.Please select the reason of your visit" | translate}}</h2>
+			<div class="row reason-section">
+				<div class="col-md-3 col-md-offset-1 text-right col-lg-3 col-lg-offset-2">
+					<div class="hex-unit">
+						<div class="hex" ng-click="moveToAppointment()">
+					        <div class='r-hex'>
+					            <div class='r-hex-inner'>
+					                <div class='r-hex-inner-2'>
+					                    <img src="/assets/images/appointment.png" />
+					                </div>
+					            </div>
+						    </div> <!-- /.r-hex -->
+						</div>
+						<p ng-click="moveToAppointment()">{{ "views.start.Appointment" | translate }}</p>
+					</div> <!-- /.hex-unit -->
+				</div>
+				<div class="col-md-4 text-center col-lg-3 col-lg-offset-2">
+					<div class="hex-unit">
+						<div class="hex" ng-click="moveToDelivery()">
+							<div class='r-hex'>
+								<div class='r-hex-inner'>
+									<div class='r-hex-inner-2' ng-click="moveToDelivery()">
+										<img src="/assets/images/delivery.png" />
+									</div>
+								</div>
+							</div> <!-- /.r-hex -->
+						</div> <!-- /.hex -->
+						<p ng-click="moveToDelivery()">{{ "views.start.Delivery" | translate }}</p>
+					</div> <!-- /.reason-unit -->
+				</div>
+				<div class="col-md-3 text-center col-lg-4 hide">
+					<div class="hex-unit">
+						<div class="hex">
+							<div class='r-hex'>
+								<div class='r-hex-inner'>
+									<div class='r-hex-inner-2'>
+										<img src="/assets/images/training.png" />
+									</div>
+								</div>
+							</div> <!-- /.r-hex -->
+						</div> <!-- /.hex -->
+						<p>{{ "views.start.Training" | translate }}</p>
+					</div> <!-- /.reason-unit -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

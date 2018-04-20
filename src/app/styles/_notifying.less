@@ -1,0 +1,51 @@
+#notifying, #notified  {
+	position: relative;
+	height: 100vh;
+	.hex-unit {
+		margin-top: 10vh;
+	}
+	h3 {
+		margin-top: 25vh;
+		font-size: 3rem;
+		color: @main-black-color;
+		text-transform: uppercase;
+		margin-left: -5em;
+		margin-right: -5em;
+	}
+
+	h4 {
+		text-transform: uppercase;
+		font-size: 1.8rem;
+	}
+
+	.loader {
+		width: 175px;
+		height: 67px;
+		padding-top: 20px;
+		position: absolute;
+		left: 50%;
+		margin-left: -88px;
+		bottom: 0px;
+		background-size: cover;
+		background-image: url(../assets/images/sign_in_button.png);
+		background-repeat: no-repeat;
+		text-align: center;
+		&:hover {
+			background-image: url(../assets/images/sign_in_button_on.png);
+		}
+		span {
+			background-image: url(../assets/images/loader.gif);
+			background-repeat: no-repeat;
+			width: 42px;
+			height: 42px;
+			display: inline-block;
+		}
+
+		@media (min-width: 1920px) {
+			width: 225px;
+			height: 87px;
+			margin-left: -113px;
+			padding-top: 30px;
+		}
+	}
+}

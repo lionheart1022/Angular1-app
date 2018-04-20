@@ -1,0 +1,81 @@
+nav {
+	height: 11vh;
+	position: relative;
+	a {
+		cursor: pointer;
+		background-size: cover;
+		display: inline-block;
+	}
+	a.bell {
+		width: 175px;
+		height: 67px;
+		position: absolute;
+		left: 50%;
+		margin-left: -88px;
+		background-image: url(../assets/images/bell.png);
+		&:hover {
+			background-image: url(../assets/images/bell_on.png);
+		}
+	}
+	a.lang-switch {
+		width: 88px;
+		height: 85px;
+		&.en_US {
+			background-image: url(../assets/images/NL.png);
+			&:hover {
+				background-image: url(../assets/images/NL_on.png);
+			}
+		}
+		&.nl_NL {
+			background-image: url(../assets/images/EN.png);
+			&:hover {
+				background-image: url(../assets/images/EN_on.png);
+			}
+		}
+	}
+
+	a.back {
+		width: 85px;
+		height: 85px;
+		background-image: url(../assets/images/back.png);
+		&:hover {
+			background-image: url(../assets/images/back_on.png);
+		}
+	}
+	a.close {
+		width: 85px;
+		height: 85px;
+		background-image: url(../assets/images/close_on.png);
+		&:hover {
+			background-image: url(../assets/images/close.png);
+		}
+	}
+	a.search-trigger {
+		width: 88px;
+		height: 85px;
+		background-image: url(../assets/images/search_bg.png);
+		&:hover {
+			background-image: url(../assets/images/search_bg.png);
+		}
+	}
+
+	@media (min-width: 1920px) {
+		a.lang-switch, a.search-trigger {
+			width: 130px;
+			height: 125px;
+		}
+
+		a.bell {
+			width: 225px;
+			height: 87px;
+			margin-left: -113px;
+		}
+
+		a.back, a.close {
+			width: 125px;
+			height: 125px;
+		}
+
+	}
+
+} /* /nav */

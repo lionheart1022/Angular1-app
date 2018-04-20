@@ -1,0 +1,29 @@
+{
+    "views.welcome.Welcome To": "Welcome To",
+    "views.welcome.Touch screen to begin": "Touch screen to begin",
+
+    "views.start.Please select the reason of your visit": "Please select the reason of your visit",
+    "views.start.Appointment": "Appointment",
+    "views.start.Delivery": "Package",
+    "views.start.Training": "Training Visit",
+
+    "views.signup.Please enter your name": "Please enter your name",
+    "views.signup.Your Name": "Your Name",
+    "views.signup.Company Optional": "Company (Optional)",
+    "views.signup.Sign Up": "Next >",
+
+    "views.employeelist.Who are you here to meet?": "Who are you here to meet?",
+    "views.employeelist.Type here to search": "Type here to search",
+    "views.employeelist.We found these people for you:": "We found these Decosians for you:",
+    "views.employeelist.No people found matching": "No Decosians found matching",
+    "views.employeelist.For whom you are delivering or picking up a package?": "For whom you are delivering or picking up a package?",
+    "views.employeelist.is not responding, please select someone else or inform the Decos Team": "is not responding, please select someone else or inform the Decos Team",
+
+    "views.delivery_target.Please select delivery recipient": "Please select delivery recipient",
+    "views.delivery_target.Decos Team": "Decos Team",
+    "views.delivery_target.Specific Person": "Specific Person",
+
+    "views.notifying.Notifying": "Notifying {{value}} of your arrival",
+    "views.notified.has been notified of your arrival": "has been notified of your arrival",
+    "views.notified.Please Stand By": "Please Stand By"
+}
