@@ -10,7 +10,7 @@
     "gulp-angular-templates": "0.0.2"
   },
   "devDependencies": {
-    "gulp": "^3.7.0",
+    "gulp": "^4.0.2",
     "gulp-util": "^2.2.14",
     "gulp-jshint": "^1.6.1",
     "gulp-load-plugins": "~0.5.1",
